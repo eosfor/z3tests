@@ -23,6 +23,9 @@ $ctx = [Microsoft.Z3.Context]::new()
 $zero = $ctx.MkNumeral(0, $ctx.MkIntSort())
 $one = $ctx.MkNumeral(1, $ctx.MkIntSort())
 
+# enum existingVMs;
+# enum vmSizes;
+
 $existingVMs = $ctx.MkEnumSort("existingVMs", $sourceVMs.vmid)
 $vmSizes = $ctx.MkEnumSort("vmSizes", $targetSizes.Name)
 

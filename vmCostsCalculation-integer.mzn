@@ -35,6 +35,7 @@ var int: totalPrice = sum(vm in existingVMs)(vmSizePrice[selectedSize[vm]]);
 var int: totalACU = sum(vm in existingVMs)( vmSizeACU[selectedSize[vm]] );
 
 %placeholder%
+solve  minimize totalPrice;
 
 output [ "{\n" ++ 
             "\"totalPrice\" :  \(totalPrice / 10000),\n" ++ 
